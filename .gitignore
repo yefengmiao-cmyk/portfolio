@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+
+# Figma source file (498MB, exceeds GitHub's 100MB limit; lives in Figma's cloud anyway)
+Design/*.fig
