@@ -397,11 +397,10 @@
       <!-- Hero: screen recording -->
       <div style="background: rgb(246,246,246); margin-top: 24px; width: 100vw; margin-left: calc(50% - 50vw);">
         <div style="max-width: 1080px; margin: 0 auto; padding: 64px 40px;">
-          <div style="width: 100%; aspect-ratio: 809 / 456; background: rgb(255,255,255); box-shadow: 0 0 1px rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
-            <div style="width: 64px; height: 64px; border-radius: 50%; background: rgb(57,65,77); display: flex; align-items: center; justify-content: center;">
-              <div style="width: 0; height: 0; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent rgb(255,255,255); margin-left: 4px;"></div>
-            </div>
-            <div style="font-size: 13px; color: rgba(16,18,20,0.55); letter-spacing: 0.3px;">Screen recording — Booking Management dashboard demo</div>
+          <div style="width: 100%; aspect-ratio: 1400 / 790; border-radius: 4px; overflow: hidden; box-shadow: 0 0 1px rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.08);">
+            <video class="scroll-video" muted loop playsinline preload="metadata" poster="assets/video/booking-management-poster.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <source src="assets/video/booking-management.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
@@ -590,11 +589,10 @@
         <!-- All-hands video -->
         <div style="margin-top: 30px;">
           <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: rgba(16,18,20,0.45); margin-bottom: 10px;">all-hands demo</div>
-          <div style="position: relative; border-radius: 10px; aspect-ratio: 16 / 9; background: rgb(28,32,38); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <div style="width: 72px; height: 72px; border-radius: 999px; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center;">
-              <div style="width: 0; height: 0; border-style: solid; border-width: 13px 0 13px 22px; border-color: transparent transparent transparent rgba(255,255,255,0.9); margin-left: 5px;"></div>
-            </div>
-            <span style="position: absolute; left: 16px; bottom: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; letter-spacing: 0.3px; color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.35); border-radius: 4px; padding: 6px 10px;">[ video ] all-hands product demo — drop file here</span>
+          <div style="border-radius: 10px; aspect-ratio: 1600 / 790; background: rgb(28,32,38); overflow: hidden;">
+            <video class="scroll-video" muted loop playsinline preload="metadata" poster="assets/video/frontier-mvp-poster.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <source src="assets/video/frontier-mvp.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
@@ -755,19 +753,23 @@ Active Design Time Jan - Mar 2018 (Program launched in June 2018)
 Post Launch Research Sept - Nov 2018</div>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 1000px;">
-          <h2 style="font-size: 24px; font-weight: 700; color: rgb(16,18,20); letter-spacing: 0.563px; line-height: 1.333; margin: 0;">My Process</h2>
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Discover</span></div>
-            <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
-            <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Define</span></div>
-            <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
-            <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Design</span></div>
-            <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
-            <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Build</span></div>
-            <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
-            <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Validate</span></div>
-          </div>
+      </div>
+
+      <!-- My Process — full width -->
+      <div style="padding: 0 40px;">
+        <h2 style="font-size: 24px; font-weight: 700; color: rgb(16,18,20); letter-spacing: 0.563px; line-height: 1.333; margin: 0;">My Process</h2>
+      </div>
+      <div style="width: 100vw; margin-left: calc(50% - 50vw); padding: 24px 40px 64px;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; max-width: 1400px; margin: 0 auto;">
+          <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Discover</span></div>
+          <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
+          <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Define</span></div>
+          <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
+          <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Design</span></div>
+          <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
+          <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Build</span></div>
+          <span style="color: rgb(98,148,190); font-size: 20px; flex: none;">→</span>
+          <div style="background: rgb(57,65,77); border-radius: 4px; padding: 16px; display: flex; align-items: center; justify-content: center; min-width: 110px; flex: 1;"><span style="font-size: 22.5px; font-weight: 400; letter-spacing: 0.563px; color: rgb(255,255,255);">Validate</span></div>
         </div>
       </div>
 

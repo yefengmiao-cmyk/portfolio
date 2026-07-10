@@ -75,4 +75,22 @@
   }
   window.addEventListener("scroll", onScroll, true);
   setInterval(onScroll, 200);
+
+  // Autoplay <video class="scroll-video"> while it's in the viewport, pause otherwise.
+  var scrollVideos = document.querySelectorAll(".scroll-video");
+  if (scrollVideos.length && "IntersectionObserver" in window) {
+    var videoObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var video = entry.target;
+        if (entry.isIntersecting) {
+          video.play().catch(function () {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+    for (var vi = 0; vi < scrollVideos.length; vi++) {
+      videoObserver.observe(scrollVideos[vi]);
+    }
+  }
 })();
