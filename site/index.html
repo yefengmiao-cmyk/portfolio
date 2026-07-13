@@ -9,6 +9,18 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<div id="passwordGate" style="position: fixed; inset: 0; z-index: 1000; background: rgb(255,255,255); display: flex; align-items: center; justify-content: center; padding: 24px;">
+  <form id="passwordGateForm" style="width: 100%; max-width: 320px; text-align: center;">
+    <div style="font-size: 20px; font-weight: 700; letter-spacing: 0.2px; color: rgb(16,18,20);">Yefeng Miao</div>
+    <div style="font-size: 13px; font-weight: 400; color: rgba(16,18,20,0.55); margin-top: 2px;">Design Leader</div>
+    <p style="font-size: 14px; line-height: 1.5; color: rgba(16,18,20,0.65); margin: 28px 0 0;">This portfolio is password-protected. Please enter the password you were given.</p>
+    <input id="passwordGateInput" type="password" autocomplete="off" autofocus placeholder="Password" style="width: 100%; margin-top: 20px; padding: 12px 14px; font-size: 15px; font-family: inherit; border: 1px solid rgb(214,221,230); border-radius: 6px; box-sizing: border-box; outline: none;">
+    <button type="submit" style="width: 100%; margin-top: 12px; padding: 12px 14px; font-size: 15px; font-weight: 600; font-family: inherit; color: rgb(255,255,255); background: rgb(16,18,20); border: none; border-radius: 6px; cursor: pointer;">Enter</button>
+    <div id="passwordGateError" style="display: none; font-size: 13px; color: rgb(195,75,63); margin-top: 14px;">Incorrect password — please try again.</div>
+  </form>
+</div>
+
 <div style="min-height: 100vh; background: rgb(255,255,255); color: rgb(16,18,20);">
 
   <header id="mainNav" style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); border-bottom: 1px solid rgb(237,239,242);">

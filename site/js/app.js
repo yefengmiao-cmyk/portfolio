@@ -1,4 +1,44 @@
 (function () {
+  // Password gate — a soft deterrent for casual visitors, not real access control.
+  var GATE_HASH = "dc0f0fad0e2543f430c5cb217f0dca3a0faf362f81dfb83e0862bbca5fbb4a73";
+  var GATE_KEY = "portfolio_unlocked_v1";
+  var gate = document.getElementById("passwordGate");
+
+  function sha256Hex(text) {
+    var data = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", data).then(function (buf) {
+      var bytes = new Uint8Array(buf);
+      var hex = "";
+      for (var i = 0; i < bytes.length; i++) {
+        hex += bytes[i].toString(16).padStart(2, "0");
+      }
+      return hex;
+    });
+  }
+
+  if (gate) {
+    if (localStorage.getItem(GATE_KEY) === "1") {
+      gate.style.display = "none";
+    } else {
+      var form = document.getElementById("passwordGateForm");
+      var input = document.getElementById("passwordGateInput");
+      var error = document.getElementById("passwordGateError");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        sha256Hex(input.value).then(function (hash) {
+          if (hash === GATE_HASH) {
+            localStorage.setItem(GATE_KEY, "1");
+            gate.style.display = "none";
+          } else {
+            error.style.display = "block";
+            input.value = "";
+            input.focus();
+          }
+        });
+      });
+    }
+  }
+
   var CASES = {
     "hunter": { title: "Hunter — The Future of Sales Recruiting" },
     "pitchbook": { title: "Redefining the deal sourcing engine for private markets" },
